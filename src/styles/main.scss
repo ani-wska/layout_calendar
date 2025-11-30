@@ -1,11 +1,12 @@
+@use "sass:list";
+
 $day-size: 100px;
 $gap: 1px;
 $border: 1px;
 $columns: 7;
 $pad: 10px;
 $step: $day-size + $gap;
-
-@use "sass:list";
+$font-size: 30px;
 
 * {
   box-sizing: border-box;
@@ -60,7 +61,7 @@ body {
   top: 50%;
   left: 50%;
   font-family: Arial, sans-serif;
-  font-size: 30px;
+  font-size: $font-size;
   transform: translate(-50%, -50%);
 }
 
