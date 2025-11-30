@@ -4,6 +4,7 @@ $border: 1px;
 $columns: 7;
 $pad: 10px;
 $step: $day-size + $gap;
+@use "sass:list";
 
 * {
   box-sizing: border-box;
@@ -45,10 +46,11 @@ body {
 }
 
 .calendar__day:hover {
-  cursor: pointer;
+  z-index: 10;
   background: #ffbfcb;
   transform: translateY(-20px);
-  z-index: 10;
+  cursor: pointer;
+
 }
 
 .calendar__day::before {
