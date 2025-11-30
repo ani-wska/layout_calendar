@@ -4,6 +4,7 @@ $border: 1px;
 $columns: 7;
 $pad: 10px;
 $step: $day-size + $gap;
+
 @use "sass:list";
 
 * {
