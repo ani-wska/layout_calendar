@@ -33,11 +33,11 @@ body {
 }
 
 .calendar__day {
+  position: relative;
   width: $day-size;
   height: $day-size;
-  background: #eee;
   border: $border solid #000;
-  position: relative;
+  background: #eee;
   transition:
     background 0.5s,
     transform 0.5s;
@@ -56,9 +56,9 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   font-family: Arial, sans-serif;
   font-size: 30px;
+  transform: translate(-50%, -50%);
 }
 
 @for $i from 1 through 31 {
@@ -70,7 +70,7 @@ body {
 $weekdays: sun, mon, tue, wed, thu, fri, sat;
 
 @each $d in $weekdays {
-  $idx: index($weekdays, $d) - 1;
+  $idx: list.index($weekdays, $d) - 1;
   .calendar--start-day-#{$d} .calendar__day:nth-child(1) {
     margin-left: $idx * $step;
   }
